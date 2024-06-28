@@ -28,4 +28,5 @@ public class AtananIsListesi { // Atanan işler için bir sınıf oluturdum ve g
     public String getGorev() {
         return gorev;
     }
+
 }

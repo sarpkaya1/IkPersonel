@@ -1,19 +1,22 @@
 package org.example;
 
-public class KadınPersonel extends IkDepatment{
-    public KadınPersonel(String ad, String soyad, int dogumTarihi) {
-        super(ad, soyad, dogumTarihi);
+public class KadınPersonel extends Personel{
+    public KadınPersonel(String ad, String soyad, int dogumTarihi, int emekliOlmaYasi) {
+        super(ad, soyad, dogumTarihi, emekliOlmaYasi);
     }
+
+    @Override
+    void emeklilikHesapla(int dogumTarihi) {
+        System.out.println(getAd()+"kişisinin emekliliğine " + (emekliOlmaYasi - mevcutYas) + " var.");
+    }
+
     int emekliOlmaYasi = 60;
     int mevcutYil = 2024;
     int mevcutYas = mevcutYil - getDogumTarihi();
     int emekliligeKalanYil = emekliOlmaYasi - mevcutYas;
-    public void emeklilikHesapla(int mevcutYas){
-        if (mevcutYas <emekliOlmaYasi){
-            System.out.println(getAd()+ "Kişisinin emekli olmasına " + emekliligeKalanYil + " yıl vardır");
-        }
 
 
-    }
+
+
 
 }

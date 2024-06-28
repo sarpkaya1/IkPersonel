@@ -1,36 +1,58 @@
 package org.example;
 
-abstract class IkDepatment {  // Abstract sınıf oluşturarak ortak özellikleri buraya ekledim.
-   private String ad;
-   private String soyad;        ;
-   private int dogumTarihi;
+import java.util.ArrayList;
+import java.util.List;
 
-   public IkDepatment (String ad, String soyad, int dogumTarihi){
-      this.ad = ad;
-      this.soyad = soyad;
-      this.dogumTarihi = dogumTarihi;
+public class IkDepatment {  // Abstract sınıf oluşturarak ortak özellikleri buraya ekledim.
+   private String takimLideri;
+   private List<Personel> personelList;
+   private List<AtananIsListesi> atananIsListesiList;
+
+
+   public String getTakimLideri() {
+      return takimLideri;
    }
 
-   public String getAd() {
-      return ad;
+   public List<Personel> getPersonelList() {
+      return personelList;
    }
 
-   public String getSoyad() {
-      return soyad;
+   public List<AtananIsListesi> getAtananIsListesiList() {
+      return atananIsListesiList;
    }
 
-   public int getDogumTarihi() {
-      return dogumTarihi;
+   public IkDepatment (String takimLideri){
+      this.takimLideri= takimLideri;
+      this.personelList = new ArrayList<>();
+      this.atananIsListesiList = new ArrayList<>();
+
+   }
+   public void addPersonel(Personel personel) {
+      this.personelList.add(personel);
+   }
+   public void removePersonel(Personel personel) {
+      this.personelList.remove(personel);
+   }
+   public void adGorev(AtananIsListesi gorev){
+      this.atananIsListesiList.add(gorev);
+   }
+   public void removeGorev(AtananIsListesi gorev) {
+      this.atananIsListesiList.remove(gorev);
+      System.out.println("Görev tamamlanmıştır");
    }
 
 
-   public void setAd(String ad) {
-      this.ad = ad;
-   }
 
-   public void setSoyad(String soyad) {
-      this.soyad = soyad;
-   }
+
+
+
+
+
+
+
+
+
+
 }
 
 
