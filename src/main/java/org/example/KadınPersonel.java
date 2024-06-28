@@ -14,6 +14,7 @@ public class KadınPersonel extends Personel{
     int mevcutYil = 2024;
     int mevcutYas = mevcutYil - getDogumTarihi();
     int emekliligeKalanYil = emekliOlmaYasi - mevcutYas;
+    //
 
 
 

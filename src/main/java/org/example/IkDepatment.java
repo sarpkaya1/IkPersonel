@@ -42,7 +42,7 @@ public class IkDepatment {  // Abstract sınıf oluşturarak ortak özellikleri 
    }
 
 
-
+//
 
 
 

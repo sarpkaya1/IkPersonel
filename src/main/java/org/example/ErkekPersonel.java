@@ -15,5 +15,5 @@ public class ErkekPersonel extends Personel{
     int mevcutYas = mevcutYil - getDogumTarihi();
     int emekliligeKalanYil = emekliOlmaYasi - mevcutYas;
 
-
+//
 }

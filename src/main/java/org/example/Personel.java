@@ -54,7 +54,7 @@ abstract class Personel {
 
     abstract void emeklilikHesapla(int dogumTarihi);
 
-
+//
 
 
 

@@ -29,4 +29,4 @@ public class AtananIsListesi { // Atanan işler için bir sınıf oluturdum ve g
         return gorev;
     }
 
-}
+}//
